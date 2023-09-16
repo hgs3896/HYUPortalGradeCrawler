@@ -50,10 +50,13 @@ class PortalCrawler:
         user_pw.send_keys(pw)
         login_btn.click()
         
-        WebDriverWait(self.driver, 3).until(EC.presence_of_element_located((By.CSS_SELECTOR, "#btn_cancel")))
-        btn_cancel = self.driver.find_element(By.CSS_SELECTOR, "#btn_cancel")
-        if btn_cancel is not None:
-            btn_cancel.click()
+        try:
+            WebDriverWait(self.driver, 3).until(EC.presence_of_element_located((By.CSS_SELECTOR, "#btn_cancel")))
+            btn_cancel = self.driver.find_element(By.CSS_SELECTOR, "#btn_cancel")
+            if btn_cancel is not None:
+                btn_cancel.click()
+        except:
+            pass
         
         WebDriverWait(self.driver, 3).until(EC.presence_of_element_located((By.CSS_SELECTOR, "#lnb > ul > li.M002489 > ul > li.M008728 > a")))
         # 학기별 성적 조회 클릭
