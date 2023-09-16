@@ -1,6 +1,6 @@
 # HYWEP Crawler
 
-<!-- ![Crawler](crawling_sample.gif) -->
+[![Youtube Usage Video](http://img.youtube.com/vi/j6lgh2zTO3s/0.jpg)](https://www.youtube.com/watch?v=j6lgh2zTO3s?t=0s)
 
 > HYU Portal(한양대학교 포털) 페이지를 크롤링하여 성적 엑셀파일로 만들어주는 python 스크립트입니다.  
 
@@ -8,7 +8,7 @@
 
 <img src="./images/quick-start-guide-for-windows.png" alt="다운 방법">
 
-[이 파일](https://github.com/mingeun2154/HYUPortalGradeCrawler/blob/main/windowsCommand.bat)을 다운받아 실행(클릭)합니다.
+[이 파일](https://github.com/hgs3896/HYUPortalGradeCrawler/blob/main/windowsCommand.bat)을 다운받아 실행(클릭)합니다.
 
 
 ## 0. 기본 구조
