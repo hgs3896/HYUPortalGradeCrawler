@@ -1,0 +1,15 @@
+[project]
+name = "hyuportalgradecrawler"
+version = "0.1.0"
+description = "한양대학교 성적 크롤러"
+authors = [
+    { name = "함지성", email = "hgs3896@naver.com" },
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=2.2.5",
+    "pandas>=2.2.3",
+    "selenium>=4.32.0",
+    "xlsxwriter>=3.2.3",
+]

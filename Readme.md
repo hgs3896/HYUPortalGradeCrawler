@@ -4,13 +4,6 @@
 
 > HYU Portal(한양대학교 포털) 페이지를 크롤링하여 성적 엑셀파일로 만들어주는 python 스크립트입니다.  
 
-## Quick Start (윈도우 사용자)
-
-<img src="./images/quick-start-guide-for-windows.png" alt="다운 방법">
-
-[이 파일](https://github.com/hgs3896/HYUPortalGradeCrawler/blob/main/windowsCommand.bat)을 다운받아 실행(클릭)합니다.
-
-
 ## 0. 기본 구조
 
 ```
@@ -26,36 +19,52 @@
 
 ### 1-1. 파이썬 및 관련 패키지 설치
 
-#### 1-1-1. 파이썬 설치
+#### 1-1-1. 파이썬 패키지 관리자 설치
 
-https://www.python.org/downloads/ 에서 파이썬 3.6이상 버전을 설치해주세요.
+- Windows
+
+  1. Powershell 열기
+
+  2. 다음 명령어 실행
+  ```powershell
+  powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+  ```
+
+- Mac/Linux
+
+  1. bash/zsh 쉘 실행
+
+  2. 다음 명령어 실행
+  ```bash
+  curl -LsSf https://astral.sh/uv/install.sh | sh
+  ```
 
 #### 1-2-2. 크롤링 관련 패키지 설치
 
 ```bash
-pip install -r requirements.txt
+uv sync
 ```
 
 ### 1-2. 크롬 브라우저 설치
 
 https://www.google.co.kr/chrome 에서 최신 버전의 크롬을 설치해주세요.
 
-
-
 ## 2. 크롤링
 
 ```bash
-python main.py (한양인ID) (한양인PW)
+uv run main.py (한양인ID) (한양인PW)
+# or
+uv run main.py
 ```
 
-![Before Crawling](1.png)
+![Before Crawling](images/1.png)
 
 #### <u>크롤링할 항목의 번호</u>를 입력한다.
 
-![After Crawling](2.png)
+![After Crawling](images/2.png)
 
 
 
 ## 3. 결과 확인
 
-![크롤링된 파일](3.png)
+![크롤링된 파일](images/3.png)
